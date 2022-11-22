@@ -94,6 +94,7 @@ p {
 
 
     transition: .1s;
+
 }
 
 #menu a:hover {
@@ -508,6 +509,9 @@ button {
     color: hsl(12, 88%, 59%);
 }
 
+.swiper-pagination-bullet-active {
+    background-color: hsl(12, 88%, 59%) !important;
+  }
 
 @media screen and (min-width: 400px) {
 
@@ -575,6 +579,7 @@ display: none;    }
     margin-top: 0px;
     margin-bottom: 120px;
 }
+
 
 
 .swiper-slide p {
@@ -724,6 +729,19 @@ display: none;    }
 }
 
 
+@media screen and (min-width: 1171px) {
+
+    .orange-box {
+
+            
+        background-image: url(./images/bg-simplify-section-desktop.svg);
+        background-size: 100%;
+        background-position-x: 150px;
+        
+        
+    }
+}
+
 @media screen and (min-width: 1000px) {
 
     .first-container, .second-card-container, nav {
@@ -825,6 +843,8 @@ display: none;    }
     
         }
 
+
+        
       
 
 
