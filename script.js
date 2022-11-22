@@ -37,49 +37,51 @@ modal.addEventListener('click', (e) => {
   })
   
 
+  // Email form validation //
 
 
-  let slideIndex = 1;
-showSlides(slideIndex);
+const input = document.getElementById('updates');
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+const errorMsg = document.getElementById('error');
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let thumbnails = document.getElementsByClassName("thumbnail");
+document.addEventListener('submit', (e) => {
 
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+
+  if (input.value.length > 0) {
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input.value)) {
+
+      errorMsg.textContent = '';
+      input.style.outline = 'none';
+      input.style.color = 'black';
+
+
+
+    } else {
+
+      errorMsg.textContent = 'Please insert a valid email';
+      input.style.outline = ' 1px solid hsl(12, 88%, 59%)';
+      input.style.color = 'hsl(12, 88%, 59%)';
+      e.preventDefault();
     }
 
-    for (i = 0; i < thumbnails.length; i++) {
-      thumbnails[i].className = thumbnails[i].className.replace(" test", "");
+  } else {
+
+    errorMsg.textContent = 'Please insert a valid email';
+    input.style.outline = ' 1px solid hsl(12, 88%, 59%)';
+    e.preventDefault();
+
+
+
+
   }
-    
-    thumbnails[slideIndex-1].className += " test";
-
-    slides[slideIndex-1].style.display = "block";
-  }
 
 
-//   document.addEventListener('keydown', function(event) {
-//     if(event.keyCode == 37) {
-//         plusSlides(-1)
-//     }
-//     else if(event.keyCode == 39) {
-//         plusSlides(1)
-//     }
-// });
+})
+
+ 
+
 
 
 

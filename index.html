@@ -204,7 +204,7 @@
       <span>Simplify how your team<br id="break">works today.</span>
 
       <div>
-      <button>Get Started</button>
+      <button id="white-btn">Get Started</button>
 
 </div>
 </section>
@@ -216,9 +216,10 @@
           <div class="input-container">
         <label for="updates"></label>
         <input type="text" id="updates" placeholder="Updates in your inbox...">
+        <i id="error"></i>
         </div>
 
-      <button type="submit">Go</button>
+      <button id="submit-btn" type="submit">Go</button>
 
 
       </form>
@@ -257,7 +258,7 @@
           <img src="./images/icon-youtube.svg">
           <img src="./images/icon-twitter.svg">
           <img src="./images/icon-pinterest.svg">
-          <img src="./images/icon-instagram.svg">
+          <img id="testt" src="./images/icon-instagram.svg">
 
 
 
@@ -315,6 +316,12 @@
       loop: true,
       slidesPerView: 1,
       spaceBetween: 20,
+
+      mousewheel: {
+
+        invert: true,
+
+      },
 
       breakpoints: {
     // when window width is >= 1440

@@ -31,7 +31,20 @@ main {
 }
 
 
+.input-container{
 
+    position: relative;
+}
+
+#error {
+
+    position: absolute;
+    color: hsl(12, 88%, 59%);
+    left: 17px;
+    top: 40px;
+    font-size: .8em;
+    
+}
 
 
 nav {
@@ -77,9 +90,49 @@ p {
     cursor: pointer;
 }
 
+#menu a {
+
+
+    transition: .1s;
+}
+
+#menu a:hover {
+
+
+    color: hsl(227, 12%, 61%);
+}
+
+#white-btn {
+
+    outline: 2px solid white !important;
+}
+
+#white-btn:hover {
+
+    color: hsl(12, 88%, 75%)
+}
+
+.list-container {
+
+    cursor: pointer;
+
+}
+
+.icon-container img:hover {
+
+    filter: invert(45%) sepia(73%) saturate(1390%) hue-rotate(336deg) brightness(96%) contrast(97%);
+    cursor: pointer;
+    
+}
+
+.list-container a:hover {
+
+    color: #F25F3A;
+}
+
 button {
 
-    padding: 10px 22px 10px 22px;
+    padding: 8px 20px 8px 20px;
     border: none;
     border-radius: 5px;
     color: white;
@@ -297,7 +350,6 @@ form {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
-    
 }
 
 form button {
@@ -316,7 +368,11 @@ input {
     padding-left: 20px;
     padding-right: 80px;
     border-radius: 25px;
+    border: none;
+    outline: none;
 }
+
+
 
 a {
 
@@ -438,6 +494,21 @@ background: linear-gradient(0deg, rgba(0,0,0,0.47102591036414565) 54%, rgba(0,0,
     display: none;
 }
 
+button {
+
+    transition: .2s;
+    outline: 2px solid hsl(12, 88%, 59%);
+
+
+}
+
+.headings-container button:hover, .swipe-btn:hover {
+
+    background: none;
+    color: hsl(12, 88%, 59%);
+}
+
+
 @media screen and (min-width: 400px) {
 
    main {
@@ -445,6 +516,11 @@ background: linear-gradient(0deg, rgba(0,0,0,0.47102591036414565) 54%, rgba(0,0,
     width: 100vw;
     
     
+   }
+
+   .nav-menu {
+
+    width: 90%;
    }
 
    #illu {
@@ -678,7 +754,7 @@ display: none;    }
        form {
 
         gap: 10px;
-        padding-bottom: 0;
+        padding-bottom: 0px;
         padding-right: 0;
        }
 
