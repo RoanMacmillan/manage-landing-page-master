@@ -72,11 +72,16 @@ function showSlides(n) {
   }
 
 
-  document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 37) {
-        plusSlides(-1)
-    }
-    else if(event.keyCode == 39) {
-        plusSlides(1)
-    }
-});
+//   document.addEventListener('keydown', function(event) {
+//     if(event.keyCode == 37) {
+//         plusSlides(-1)
+//     }
+//     else if(event.keyCode == 39) {
+//         plusSlides(1)
+//     }
+// });
+
+
+
+
+

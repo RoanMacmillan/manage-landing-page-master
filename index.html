@@ -15,6 +15,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />    
+  
 
 </head>
 
@@ -22,7 +27,9 @@
 
   <main>
 
-    
+    <img id="bg-pattern" src='./images/bg-tablet-pattern.svg'>
+    <img id="bg-pattern2" src='./images/bg-tablet-pattern.svg'>
+
 
     <header>
       <nav>
@@ -43,30 +50,41 @@
         </div>
 
 
-        <!-- <button>Get Started</button>  -->
-        <div>
+        <div class="hamburger-container">
           <img class="mobile-btn" id="close" src="./images/icon-close.svg">
           <img class="mobile-btn" id="open" src="./images/icon-hamburger.svg">
+
+          <div class="nav-btn-container">
+          <button id="nav-btn">Get Started</button> 
+          </div>
+
         </div>
       </nav>
     </header>
 
 
     <section class="first-container">
-      <div>
+      <div class="illu-container">
 
         <img id="illu" src="./images/illustration-intro.svg">
 
       </div>
+
+      <div class="headings-container">
 
       <h1>Bring everyone together to build better products.</h1>
 
       <p>Manage makes it simple for software teams to plan day-to-day
         tasks while keeping the larger team goals in view.</p>
 
+        <div class="btn-container">
       <button>Get Started</button>
+</div>
+      </div>
 
     </section>
+
+    <section class="second-card-container">
 
     <section class="second-container">
 
@@ -125,36 +143,27 @@
 
     </section>
 
-    <section class="slide-container">
+    </section>
 
-      <h2>What they’ve said</h2>
+    <h2 id="what">What they've said</h2>
 
-
-      <div class="mySlides fade">
-
-      <img src="./images/avatar-anisha.png">
+    <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="./images/avatar-anisha.png">
       <h3>Anisha Li</h3>
       <p>“Manage has supercharged our team’s workflow. The ability to maintain
-      visibility on larger milestones at all times keeps everyone motivated.”</p>
-
-      </div>
-
-      <div class="mySlides fade">
-
-        <img src="./images/avatar-ali.png">
+      visibility on larger milestones at all times keeps everyone motivated.”</p></div>
+    <div class="swiper-slide"><img src="./images/avatar-ali.png">
 
       <h3>Ali Bravo</h3>
       <p>“We have been able to cancel so many other subscriptions since using
       Manage. There is no more cross-channel confusion and everyone is much
 
-      more focused.”</p>
-
-    </div>
-
-
-      <div class="mySlides fade">
-
-        <img src="./images/avatar-richard.png">
+      more focused.”</p></div>
+    <div class="swiper-slide"><img src="./images/avatar-richard.png">
 
       <h3>Richard Watts</h3>
 
@@ -163,40 +172,46 @@
 
       </div>
 
-      <div class="mySlides fade">
+      <div class="swiper-slide"><img src="./images/avatar-shanai.png">
 
-        <img src="./images/avatar-shanai.png">
+        <h3>Shanai Lorem</h3>
+  
+        <p>“Manage allows us to provide structure and process. It keeps us organized
+        and focused. I can’t stop recommending them to everyone I talk to!”</p>
+  
+        </div>
 
-      <h3>Shanai Gough</h3>
-      <p>“Their software allows us to track, manage and collaborate on our projects
-      from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-
-      </div>
-
-      <div class="thumbnail-container">
-
-        <div onclick="currentSlide(1)" class="thumbnail"></div>
-        <div onclick="currentSlide(2)" class="thumbnail"></div>
-        <div onclick="currentSlide(3)" class="thumbnail"></div>
-        <div onclick="currentSlide(4)" class="thumbnail"></div>
+</div>
 
 
-      </div>
 
-      <button>Get Started</button>
+<div class="swiper-pagination"></div>
 
-    </section>
+
+
+
+  </div>
+
+  <div class="b-cont">
+  <button class="swipe-btn">Learn More</button>
+  </div>
+
+
 
 <section class="orange-box">
-      <span>Simplify how your team works today.</span>
+
+
+      <span>Simplify how your team<br id="break">works today.</span>
 
       <div>
       <button>Get Started</button>
+
 </div>
-      </section>
+</section>
 
       <section class="footer">
 
+        <div id="form-child" class="child">
         <form>
           <div class="input-container">
         <label for="updates"></label>
@@ -204,7 +219,14 @@
         </div>
 
       <button type="submit">Go</button>
+
+
       </form>
+
+      <footer id="desktop-footer">Copyright 2020. All Rights Reserved</footer>
+
+
+      </div>
 
       <div class="list-container">
 
@@ -226,13 +248,20 @@
 
         </div>
 
+        <div class="child" id="left-wrapper">
+
         <div class="icon-container">
+
 
           <img src="./images/icon-facebook.svg">
           <img src="./images/icon-youtube.svg">
           <img src="./images/icon-twitter.svg">
           <img src="./images/icon-pinterest.svg">
           <img src="./images/icon-instagram.svg">
+
+
+
+          
 
 
         </div>
@@ -256,9 +285,9 @@
         </div>
 </div>
         
-      
+      </div>
 
-      <footer>Copyright 2020. All Rights Reserved</footer>
+      <footer id="mobile-footer">Copyright 2020. All Rights Reserved</footer>
       
       </section>
 
@@ -269,13 +298,59 @@
 
 
       </div>
+
+      
     
 
   </main>
 
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script>const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+      breakpoints: {
+    // when window width is >= 1440
+    1230: {
+      slidesPerView: 3,
+    },
+
+    850: {
+
+      slidesPerView: 2,
+    }
+
+  },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+
+    });
+    
+    
+
+    
+    
+    
+    
+    </script>
+
+
   
 
 <script src="./script.js"></script>
+
+
 
 </body>
 
